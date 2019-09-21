@@ -333,6 +333,33 @@
                 
 
 
+<!--首页不显示-->
+
+
+  <!--outline-->
+  <h2 id="__comments" data-no-instant>评论</h2>
+  <form id="gitalk-form" onsubmit="return false;" data-no-instant>
+    <div id="gitalk-container" data-no-instant></div>
+  </form>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'c6a8a1c1cb81cd75064d',
+      clientSecret: 'fd12e5b3172b075cd4bb89cd54610fa536af59a7',
+      repo: 'comment',  // 使用单独的仓评论
+      owner: 'SM2-wiki',  // 仓库所有者
+      admin: ['Rye-Catcher'],  // 仓库管理员列表
+      //id: '404',  // 页面唯一标识
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // 全屏遮罩效果
+      pagerDirection: 'last'  // 排序方式：first按评论创建时间正序，last倒序
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+
               
             </article>
           </div>
