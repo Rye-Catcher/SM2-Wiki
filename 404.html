@@ -337,7 +337,7 @@
 <script>
 function loadjs() {
    var wtf = 'https://www.github.com/SM2-wiki/SM2-wiki/blob/master/docs/index.md';
-   var url = document.getElementsByClassName('facts_modified')[0].href.split('docs')[1];
+   var url = document.getElementsByClassName('contents_modified')[0].href.split('docs')[1];
     // var url = document.URL.replace(/http\S+\.org\//gi, '').replace(/#\S+$/gi, '').slice(0, -1);
    var script = document.createElement('script');
    script.src = `https://api.github.com/repos/SM2-wiki/SM2-wiki/commits?path=docs${url}&callback=foo`;
@@ -371,8 +371,9 @@ function loadjs() {
 
 <body onload="loadjs()" >
 <hr><blockquote class="page-copyright"  style="padding-left: .55rem;line-height: 1.2rem;">
-  <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">build</i>在 Github 上</span><a href="" class="facts_modified">编辑此页</a>，或是查看<a id="edit_history">更新历史</a><br>
-  <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">feedback</i>想要了解此页面的贡献者或更多信息? <a id="page_info" >在 GitHub 上查看！</a></span><br>
+  <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">backup</i>此页面上一次更新时间: </span><span id="facts_modified"></span>
+  <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">build</i>在 Github 上</span><a href="" class="contents_modified">编辑此页</a>，或是查看<a id="edit_history">更新历史</a><br>
+  <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">info</i>想要了解此页面的贡献者或更多信息? <a id="page_info" >点此查看</a></span><br>
   <span><i class="md-icon" style="position: relative;top: .12rem;right: .2rem;">copyright</i>本页面的全部内容在 <strong><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></strong> 协议之条款下提供，附加条款亦可能应用</span>
 </blockquote>
 </body>
