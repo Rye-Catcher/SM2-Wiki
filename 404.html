@@ -357,7 +357,7 @@ function loadjs() {
     script.src = `https://api.github.com/repos/SM2-wiki/SM2-wiki/commits?path=docs/index.md&callback=foo`;
     document.getElementByTagName('head').appendChild(script);
    } else if (typeof(url) != 'undefined') {
-   document.getElementById('edit_history').setAttribute('href', `https://github.com/SM2-wiki/SM2-wiki/commits/master/doc`+url);
+   document.getElementById('edit_history').setAttribute('href', `https://github.com/SM2-wiki/SM2-wiki/commits/master/docs`+url);
      script.src = `https://api.github.com/repos/SM2-wiki/SM2-wiki/commits?path=docs${url}&callback=foo`;
    document.getElementByTagName('head').appendChild(script);
    } else {
