@@ -336,7 +336,7 @@
 
 <script>
 function loadjs () {
-   var url = document.getElementsByClassName('page_edit_url')[0].href.split('docs')[1];
+   var url = page.edit_url.split('docs')[1];
     // var url = document.URL.replace(/http\S+\.org\//gi, '').replace(/#\S+$/gi, '').slice(0, -1);
    var script = document.createElement('script');
    script.src = `https://api.github.com/repos/SM2-wiki/SM2-wiki/commits?path=docs${url}&callback=foo`;
